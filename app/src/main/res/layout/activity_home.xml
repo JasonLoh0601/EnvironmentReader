@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.world.jasonloh95.evironmentreader.home">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="Last Result"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <TableLayout
+        android:layout_width="256dp"
+        android:layout_height="162dp"
+        android:layout_gravity="center"
+        android:stretchColumns="1"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="132dp">
+
+        <TableRow
+            android:layout_width="355dp"
+            android:layout_height="48dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_shape"
+                android:padding="3dip"
+                android:text="Current Location"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="Singapore"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/psi"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape2"
+                android:padding="3dip"
+                android:text="PSI"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/psi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape2"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/pm25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape2"
+                android:padding="3dip"
+                android:text="PM25"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pm251"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape2"
+                android:gravity="right"
+                android:padding="3dip"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Refresh"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="382dp" />
+</LinearLayout>

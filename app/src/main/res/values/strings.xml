@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Evironment Reader</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="last_result">Last Result</string>
+    <string name="central">Central</string>
+    <string name="south">South</string>
+    <string name="refresh">Refresh</string>
+    <string name="west">West</string>
+    <string name="east">East</string>
+    <string name="region">Region</string>
+    <string name="north">North</string>
+    <string name="national">National</string>
+    <string name="pm25_hourly">PM25 (hourly)</string>
+    <string name="psi_hourly">PSI (hourly)</string>
+</resources>
