@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -58,6 +59,7 @@ public class DataAdapter extends AsyncTask<Void,Void,Void>{
     String readings;
     boolean check1 = true;
     private Context mContext;
+    String sendData= "";
 
     //get context to run function.
     public DataAdapter(Context context){
@@ -168,6 +170,7 @@ public class DataAdapter extends AsyncTask<Void,Void,Void>{
                 PM25.national.setText(national);
                 PM25.east.setText(east);
                 PM25.south.setText(south);
+                wrtieFileOnInternalStorage(p);
 
         } else if (p == "psi") {
             psi.result.setText("Last Result: " +timeStamps);
@@ -179,6 +182,35 @@ public class DataAdapter extends AsyncTask<Void,Void,Void>{
         }
 
 
+    }
+
+    public void wrtieFileOnInternalStorage(String sFileName){
+        File file = new File(mContext.getFilesDir(),p);
+        if(!file.exists()){
+            file.mkdir();
+        }
+
+        try{
+            File gpxfile = new File(file, p);
+            FileWriter writer = new FileWriter(gpxfile);
+            String writeData= "timestamp:" + timeStamps + "\n" +
+                             "west:" + west + "\n" +
+                             "east:" + east + "\n" +
+                             "north:" + north + "\n" +
+                             "south:" + south + "\n" +
+                            "national:" + national + "\n";
+
+             sendData = sendData + writeData+ "\n";
+
+             Log.i(TAG,sendData);
+            writer.append(sendData);
+            writer.flush();
+            writer.close();
+
+        }catch (Exception e){
+            e.printStackTrace();
+
+        }
     }
 
 }
